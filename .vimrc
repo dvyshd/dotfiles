@@ -21,9 +21,21 @@ filetype indent on      " load indent file for specific file type
 
 let g:highlightedyank_highlight_duration = 1000
 
+" keybindings for telescopt
+nnoremap <silent> ;f <cmd>Telescope find_files<cr>
+nnoremap <silent> ;r <cmd>Telescope live_grep<cr>
+nnoremap <silent> \\ <cmd>Telescope buffers<cr>
+nnoremap <silent> ;; <cmd>Telescope help_tags<cr>
+
 packadd minpac
 call minpac#init()
 
 call minpac#add('tpope/vim-unimpaired')
 call minpac#add('tpope/vim-scriptease', {'type':'opt'})
+call minpac#add('neovim/nvim-lspconfig')
+call minpac#add('nvim-treesitter/nvim-treesitter')
+call minpac#add('nvim-lua/popup.nvim')
+call minpac#add('nvim-lua/plenary.nvim')
+call minpac#add('nvim-telescope/telescope.nvim')
+call minpac#add('hoob3rt/lualine.nvim')
 
